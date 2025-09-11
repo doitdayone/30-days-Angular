@@ -1,0 +1,27 @@
+<div class="game-container">
+  <h1>Guess the Number Game</h1>
+  <p>Guess the number between 1 and 100!</p>
+
+  <div *ngIf="!gameOver">
+    <label for="guess">Your Guess:</label>
+    <input
+      type="number"
+      id="guess"
+      [(ngModel)]="guessedNumber"
+      [disabled]="gameOver"
+      min="1"
+      max="100"
+      placeholder="Enter a number"
+      (keyup.enter)="submitGuess()"
+    />
+
+    <button (click)="submitGuess()" [disabled]="!isValidGuess(guessedNumber)">
+      Submit Guess
+    </button>
+    <p>Attempts left: {{ attemptsLeft }}</p>
+  </div>
+  <div class="feedback" *ngIf="feedbackMessage">
+    <p>{{ feedbackMessage }}</p>
+  </div>
+  <div *ngIf="gameOver"><button (click)="resetGame()">Play Again!</button></div>
+</div>

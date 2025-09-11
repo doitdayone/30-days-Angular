@@ -1,0 +1,29 @@
+.profile-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #00cea1;
+  border-radius: 10px;
+  background-color: #baf8b7;
+  box-shadow: 0 4px px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 17px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  font-size: 16px;
+  border: 1px solid #00cea1;
+  background-color: #a8ff86;
+  border-radius: 5px;
+}
