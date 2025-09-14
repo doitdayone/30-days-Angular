@@ -1,0 +1,25 @@
+<div class="clock">
+  <div
+    class="number"
+    *ngFor="let num of clockNumbers"
+    [style.top]="num.position.top"
+    [style.left]="num.position.left"
+    [style.transform]="'translate(-50%, -50%) rotate(' + num.angle + 'deg)'"
+  >
+    {{ toRoman(num.number) }}
+  </div>
+  <div class="center"></div>
+  <div class="hand hour" [style.transform]="'rotate(' + hours + 'deg)'"></div>
+  <div
+    class="hand minute"
+    [style.transform]="'rotate(' + minutes + 'deg)'"
+  ></div>
+  <div
+    class="hand second"
+    [style.transform]="'rotate(' + seconds + 'deg)'"
+  ></div>
+</div>
+<link
+  href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+  rel="stylesheet"
+/>

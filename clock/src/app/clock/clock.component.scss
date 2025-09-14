@@ -1,0 +1,101 @@
+.clock {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 60% 40%, #fffbe6 60%, #e8e4d9 100%),
+    repeating-radial-gradient(
+      circle at 50% 50%,
+      #f7e7b6 0 2px,
+      transparent 2px 20px
+    );
+  border: 8px solid #e6c200;
+  box-shadow: 0 0 30px 8px #bfa14a88, 0 0 20px rgba(0, 0, 0, 0.4),
+    inset 0 0 25px #fffbe6, inset 0 0 15px rgba(0, 0, 0, 0.2);
+  margin: 50px auto;
+  overflow: hidden;
+}
+.clock::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  background: repeating-conic-gradient(
+    from 0deg,
+    #a89743 0deg 2deg,
+    transparent 2deg 30deg
+  );
+  opacity: 0.12;
+  z-index: 0;
+}
+.clock::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 4px double #bfa14a;
+  box-shadow: 0 0 18px 4px #bfa14a55;
+  pointer-events: none;
+  z-index: 10;
+}
+.number {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  font-family: "Cinzel", "Playfair Display", "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #bfa14a;
+  letter-spacing: 1px;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle at 60% 40%, #fffbe6 60%, #bfa14a 100%);
+  border: 2px solid #7a6a2f;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: top center;
+  transition: all 0.05s cubic-bezier(0.4, 2, 0.6, 1);
+}
+.hour {
+  width: 8px;
+  height: 80px;
+  background: linear-gradient(180deg, #bfa14a 0%, #7a6a2f 100%);
+  border-radius: 8px 8px 16px 16px;
+  z-index: 3;
+}
+.minute {
+  width: 5px;
+  height: 110px;
+  background: linear-gradient(180deg, #fffbe6 0%, #bfa14a 100%);
+  border-radius: 5px 5px 12px 12px;
+  z-index: 2;
+}
+.second {
+  width: 2.5px;
+  height: 140px;
+  background: linear-gradient(180deg, #c0392b 0%, #7a1a0e 100%);
+  border-radius: 2.5px 2.5px 8px 8px;
+  z-index: 1;
+}
