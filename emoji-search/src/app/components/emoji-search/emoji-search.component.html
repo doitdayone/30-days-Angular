@@ -1,0 +1,30 @@
+<div class="emoji-search">
+  <input
+    type="text"
+    placeholder="Search emojis..."
+    [(ngModel)]="searchTerm"
+    (input)="filterEmojis()"
+  />
+
+  <select [(ngModel)]="selectedCategory" (change)="onCategoryChange()">
+    <option value="">All Categories</option>
+    <option *ngFor="let category of categories" [value]="category">
+      {{ category }}
+    </option>
+  </select>
+
+  <div class="emoji-list">
+    <div
+      class="emoji-item"
+      *ngFor="let emoji of filteredEmojis"
+      (click)="copyToClipboard(emoji.char)"
+    >
+      <span class="emoji-symbol">{{ emoji.char }}</span>
+      <span class="emoji-name">{{ emoji.name }}</span>
+    </div>
+  </div>
+
+  <div class="notification" *ngIf="clipboardNotification">
+    {{ clipboardNotification }}
+  </div>
+</div>

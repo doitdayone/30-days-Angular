@@ -1,0 +1,19 @@
+.theme-picker {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+button {
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 14px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
