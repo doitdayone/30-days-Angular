@@ -1,0 +1,38 @@
+.day-card {
+  animation: fadeIn 0.25s ease-in forwards;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.day-number {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.day-name {
+  font-size: 1rem;
+  color: #666;
+}
+
+.today {
+  background-color: #007bff;
+  color: #2b1ea8;
+}
+
+.past {
+  background-color: #e0e0e0;
+  color: #b0b0b0;
+  border: 1px solid #ccc;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

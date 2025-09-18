@@ -1,0 +1,41 @@
+.calendar-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.calender-menu h2 {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 200%;
+  text-align: center;
+}
+
+.calendar-grid {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  background-color: #dbdbdbdb;
+  border: 1px solid #919191;
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+app-day-card {
+  height: 67px;
+  width: 228px;
+  text-align: center;
+}
